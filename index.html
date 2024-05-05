@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial numbers</title>
+</head>
+<body>
+    <form onsubmit="return fun1()">
+        <input type="text" id="num1" placeholder="Enter the number"><br><br>
+        <input type="submit" value="Submit Now"><br><br>
+        <div id="mess">Hello</div>
+    </form>
+    <script>
+        function fun1()
+        {
+            a=document.getElementById('num1').value;
+            f=1;
+            if(a=='')
+            {
+                document.getElementById('mess').innerHTML="Please enter the number"
+                return false;
+            }
+            else
+            {
+                for(var i=1;i<=a;i++)
+                {
+                    f=f*i;
+                }
+                document.getElementById('mess').innerHTML="The factorial is :"+f;
+                return false;
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>
